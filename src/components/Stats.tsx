@@ -39,7 +39,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 export default function Stats() {
   return (
     <section className="py-24 bg-white border-b border-slate-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-0 divide-x divide-slate-100">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-0 sm:divide-x divide-slate-100 border-x border-slate-100">
         {stats.map((stat, i) => (
           <motion.div
             key={stat.label}
@@ -47,7 +47,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: i * 0.1 }}
-            className="p-10 text-center hover:bg-slate-50 transition-all group relative"
+            className="p-6 sm:p-10 text-center hover:bg-slate-50 transition-all group relative border-b sm:border-b-0 border-slate-100"
           >
             <div className="w-14 h-14 bg-slate-900 flex items-center justify-center mx-auto mb-6 text-white group-hover:bg-sky-600 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-12">
               <stat.icon className="w-6 h-6" />

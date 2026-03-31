@@ -2,14 +2,25 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
+  { 
+    label: "Services", 
+    href: "/services",
+    submenu: [
+      { label: "Permanent Staffing", href: "/services/permanent-staffing" },
+      { label: "Contract Staffing", href: "/services/contract-staffing" },
+      { label: "Executive Search", href: "/services/executive-search" },
+      { label: "RPO Services", href: "/services/rpo-services" },
+      { label: "IT Staffing", href: "/services/it-staffing" },
+      { label: "HR Consulting", href: "/services/hr-consulting" },
+    ]
+  },
   { label: "Industries", href: "/industries" },
   { label: "Job Seekers", href: "/job-seekers" },
   { label: "Employers", href: "/employers" },
@@ -19,6 +30,7 @@ const navItems = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -29,7 +41,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-slate-950 text-slate-400 text-xs py-2.5 border-b border-white/5">
+      <div className="hidden sm:block bg-slate-950 text-slate-400 text-xs py-2.5 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-[11px] font-medium tracking-wide">
           <div className="flex items-center gap-6">
             <a href="mailto:hr@talentcircuittech.com" className="hover:text-sky-500 transition-colors flex items-center gap-2">
@@ -88,13 +100,46 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-[13px] font-bold px-4 py-2 text-slate-600 hover:text-blue-900 transition-colors uppercase tracking-wider"
+              <div 
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => setHoveredItem(item.label)}
+                onMouseLeave={() => setHoveredItem(null)}
               >
-                {item.label}
-              </Link>
+                <Link
+                  href={item.href}
+                  className="text-[13px] font-bold px-4 py-2 text-slate-600 hover:text-blue-900 transition-colors uppercase tracking-wider flex items-center gap-1"
+                >
+                  {item.label}
+                  {item.submenu && <ChevronDown className={`w-3 h-3 transition-transform ${hoveredItem === item.label ? 'rotate-180' : ''}`} />}
+                </Link>
+
+                {/* Submenu */}
+                {item.submenu && (
+                  <AnimatePresence>
+                    {hoveredItem === item.label && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 w-64 bg-slate-950 text-white p-4 shadow-2xl pt-6"
+                      >
+                        <div className="space-y-4">
+                          {item.submenu.map((sub) => (
+                            <Link
+                              key={sub.label}
+                              href={sub.href}
+                              className="block text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-sky-500 transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -121,18 +166,33 @@ export default function Navbar() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
-              className="lg:hidden fixed inset-0 top-[122px] bg-white z-[60] p-6 pt-10"
+              className="lg:hidden fixed inset-0 top-[80px] bg-white z-[60] p-6 pt-10 overflow-y-auto"
             >
-              <nav className="flex flex-col gap-6 text-center">
+              <nav className="flex flex-col gap-8 text-center pb-20">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="text-2xl font-black text-slate-950 uppercase tracking-tighter"
-                  >
-                    {item.label}
-                  </Link>
+                  <div key={item.label}>
+                    <Link
+                      href={item.href}
+                      onClick={() => !item.submenu && setMobileOpen(false)}
+                      className="text-2xl font-black text-slate-950 uppercase tracking-tighter block mb-4"
+                    >
+                      {item.label}
+                    </Link>
+                    {item.submenu && (
+                      <div className="flex flex-col gap-4">
+                        {item.submenu.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-sky-600 transition-colors"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
                 <div className="pt-6">
                   <Button asChild className="w-full h-14 text-lg font-bold rounded-none uppercase tracking-widest">

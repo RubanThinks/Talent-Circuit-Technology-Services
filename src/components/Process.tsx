@@ -36,7 +36,7 @@ export default function Process() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="p-10 border-r border-slate-100 last:border-r-0 hover:bg-slate-50 transition-all group"
+              className="p-8 sm:p-10 lg:border-r border-b lg:border-b-0 border-slate-100 last:border-r-0 hover:bg-slate-50 transition-all group"
             >
               <div className="font-heading text-6xl font-black text-slate-100 group-hover:text-sky-600/10 mb-8 transition-colors leading-none tracking-tighter">
                 {step.num}

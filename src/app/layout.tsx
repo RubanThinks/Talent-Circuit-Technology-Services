@@ -37,8 +37,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
-      <body className="bg-white text-slate-700 antialiased" suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${outfit.variable} overflow-x-hidden`} suppressHydrationWarning>
+      <body className="bg-white text-slate-700 antialiased overflow-x-hidden" suppressHydrationWarning>
         {children}
         <WhatsAppButton />
       </body>

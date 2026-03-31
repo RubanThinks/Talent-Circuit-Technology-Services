@@ -50,7 +50,7 @@ export default function Industries() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group p-10 border-r border-b border-slate-100 hover:bg-slate-950 transition-all duration-300 text-center"
+              className="group p-8 sm:p-10 border-r border-b border-slate-100 hover:bg-slate-950 transition-all duration-300 text-center"
             >
               <div className="w-14 h-14 bg-slate-50 flex items-center justify-center mx-auto mb-6 text-slate-900 group-hover:bg-sky-600 group-hover:text-white transition-all">
                 <ind.icon className="w-6 h-6" />

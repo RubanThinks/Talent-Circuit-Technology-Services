@@ -16,7 +16,7 @@ export default function DualCTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative p-10 md:p-16 text-slate-950 border-r border-slate-100 group hover:bg-slate-50 transition-all"
+          className="relative p-10 sm:p-16 text-slate-950 md:border-r border-b md:border-b-0 border-slate-100 group hover:bg-slate-50 transition-all"
         >
           <div className="relative z-10">
             <div className="w-14 h-14 bg-sky-600 flex items-center justify-center mb-8 text-white">
@@ -56,7 +56,7 @@ export default function DualCTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative p-10 md:p-16 text-white bg-slate-950"
+          className="relative p-10 sm:p-16 text-white bg-slate-950"
         >
           <div className="relative z-10">
             <div className="w-14 h-14 bg-sky-600 flex items-center justify-center mb-8 text-white">

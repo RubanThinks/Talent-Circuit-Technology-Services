@@ -54,7 +54,7 @@ export default function About() {
           <span className="inline-block font-heading text-xs font-bold uppercase tracking-[0.3em] text-sky-600 mb-6">
             The TCTS Legacy
           </span>
-          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 mb-8 uppercase tracking-tighter italic">
+          <h2 className="font-heading text-3xl sm:text-5xl font-black text-slate-950 mb-8 uppercase tracking-tighter italic">
             Connecting World-Class <br /> 
             <span className="text-sky-600">Talent & Capital</span>
           </h2>

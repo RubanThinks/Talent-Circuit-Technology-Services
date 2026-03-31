@@ -55,7 +55,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-12 border-r border-b border-slate-100 last:border-r-0 hover:bg-slate-50 transition-all group"
+              className="p-10 sm:p-12 lg:border-r border-b lg:border-b-0 border-slate-100 last:border-r-0 hover:bg-slate-50 transition-all group"
             >
               <div className="flex gap-1 mb-8 text-sky-600">
                 {Array.from({ length: 5 }).map((_, j) => (

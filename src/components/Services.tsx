@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   UsersRound,
   RotateCcw,
@@ -15,38 +16,44 @@ const services = [
   {
     icon: UsersRound,
     title: "Permanent Staffing",
+    slug: "permanent-staffing",
     desc: "Building your core team with long-term professionals who align with your company culture, values, and strategic vision.",
   },
   {
     icon: RotateCcw,
     title: "Contract Staffing",
+    slug: "contract-staffing",
     desc: "Flexible workforce solutions for project-based roles, seasonal demands, and specialized short-term requirements.",
   },
   {
     icon: UserCog,
     title: "Executive Search",
+    slug: "executive-search",
     desc: "Confidential, strategic recruitment for C-suite, VP, and senior leadership positions across all industries.",
   },
   {
     icon: SearchCheck,
     title: "RPO Services",
+    slug: "rpo-services",
     desc: "Full-cycle Recruitment Process Outsourcing — we manage your entire hiring pipeline for maximum efficiency.",
   },
   {
     icon: LaptopMinimal,
     title: "IT Staffing",
+    slug: "it-staffing",
     desc: "Specialized technology recruitment for developers, data engineers, cloud architects, and IT professionals.",
   },
   {
     icon: ArrowLeftRight,
     title: "HR Consulting",
+    slug: "hr-consulting",
     desc: "Strategic HR advisory services including workforce planning, compensation benchmarking, and talent management.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-24 bg-white border-t border-slate-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -93,12 +100,12 @@ export default function Services() {
                   {svc.desc}
                 </p>
                 
-                <a
-                  href="/contact"
+                <Link
+                  href={`/services/${svc.slug}`}
                   className="inline-flex items-center gap-3 text-[11px] font-bold uppercase tracking-widest text-slate-950 group-hover:text-sky-400 hover:group-hover:text-white transition-all"
                 >
                   Service Scope <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}

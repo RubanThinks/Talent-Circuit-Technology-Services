@@ -90,7 +90,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white border-[10px] border-slate-50 p-10 sm:p-12 shadow-2xl"
+          className="bg-white border-[6px] sm:border-[10px] border-slate-50 p-6 sm:p-12 shadow-2xl"
         >
           <h3 className="font-heading text-xl font-bold text-slate-950 mb-8 uppercase tracking-wide">
             Electronic Inquiry

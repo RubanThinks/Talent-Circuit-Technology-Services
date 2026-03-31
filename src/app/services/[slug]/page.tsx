@@ -4,8 +4,13 @@ import { notFound } from "next/navigation";
 import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 import { servicesData } from "@/data/services";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const service = servicesData[params.slug as keyof typeof servicesData];
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const service = servicesData[slug as keyof typeof servicesData];
   if (!service) return { title: "Service Not Found" };
   return {
     title: `${service.title} | Talent Circuit Technology Services`,
@@ -13,8 +18,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ServicePage({ params }: { params: { slug: string } }) {
-  const service = servicesData[params.slug as keyof typeof servicesData];
+export default async function ServicePage({ params }: Props) {
+  const { slug } = await params;
+  const service = servicesData[slug as keyof typeof servicesData];
 
   if (!service) {
     notFound();
@@ -122,11 +128,11 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               </h4>
               <div className="space-y-4">
                 {Object.entries(servicesData)
-                  .filter(([slug]) => slug !== params.slug)
-                  .map(([slug, s]) => (
+                  .filter(([sSlug]) => sSlug !== slug)
+                  .map(([sSlug, s]) => (
                     <Link
-                      key={slug}
-                      href={`/services/${slug}`}
+                      key={sSlug}
+                      href={`/services/${sSlug}`}
                       className="flex items-center justify-between group p-4 border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all font-bold uppercase tracking-widest text-[10px] text-slate-600 hover:text-sky-600"
                     >
                       {s.title}

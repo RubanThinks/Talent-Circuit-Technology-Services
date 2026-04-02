@@ -15,7 +15,7 @@ const contactItems = [
     lines: ["49C, 1st Main Road, Jeyachandran Nagar,", "Jalladianpet, Pallikaranai, Chennai – 600100"],
     href: "https://www.google.com/maps/search/?api=1&query=49C,+1st+Main+Road,+Jeyachandran+Nagar,+Jalladianpet,+Pallikaranai,+Chennai+–+600100",
   },
-  { icon: Mail, title: "Email Us", lines: ["rubans0908@gmail.com"], href: "mailto:rubans0908@gmail.com" },
+  { icon: Mail, title: "Email Us", lines: ["HR@talentcircuittech.com"], href: "mailto:HR@talentcircuittech.com" },
   { icon: Phone, title: "Call Us", lines: ["+91 98403 82636"], href: "tel:+919840382636" },
   { icon: Globe, title: "Website", lines: ["www.talentcircuittech.com"], href: "https://www.talentcircuittech.com" },
 ];

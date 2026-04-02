@@ -26,10 +26,10 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-8">
               <div className="w-10 h-10 text-sky-600">
                 <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="3" fill="none"/>
-                  <circle cx="20" cy="12" r="3" fill="currentColor"/>
-                  <circle cx="27" cy="24" r="3" fill="currentColor"/>
-                  <circle cx="13" cy="24" r="3" fill="currentColor"/>
+                  <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="3" fill="none" />
+                  <circle cx="20" cy="12" r="3" fill="currentColor" />
+                  <circle cx="27" cy="24" r="3" fill="currentColor" />
+                  <circle cx="13" cy="24" r="3" fill="currentColor" />
                 </svg>
               </div>
               <div className="flex flex-col">
@@ -42,8 +42,8 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-xs leading-relaxed mb-8 max-w-xs font-medium uppercase tracking-wider opacity-70">
-              Defining the frontier of human capital through precision 
-              recruitment and strategic sourcing. 
+              Defining the frontier of human capital through precision
+              recruitment and strategic sourcing.
             </p>
             <div className="flex gap-4">
               {[
@@ -116,35 +116,35 @@ export default function Footer() {
               Global Support
             </h4>
             <div className="space-y-5 text-xs font-bold uppercase tracking-widest leading-loose">
-              <a 
-                href="https://www.google.com/maps/search/?api=1&query=49C,+Jalladianpet,+Chennai+–+600100" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=49C,+Jalladianpet,+Chennai+–+600100"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 hover:text-sky-500 transition-colors group"
               >
                 <MapPin className="w-4 h-4 text-sky-600 mt-0.5 shrink-0 group-hover:scale-110 transition-transform" />
                 <span>49C, Jalladianpet, <br /> Chennai – 600100</span>
               </a>
-              <a 
-                href="mailto:hr@talentcircuittech.com" 
+              <a
+                href="mailto:HR@talentcircuittech.com"
                 className="flex items-center gap-3 hover:text-sky-500 transition-colors group"
               >
                 <Mail className="w-4 h-4 text-sky-600 shrink-0 group-hover:scale-110 transition-transform" />
-                hr@talentcircuittech.com
+                HR@talentcircuittech.com
               </a>
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className="flex items-center gap-3 hover:text-sky-500 transition-colors group"
               >
                 <Globe className="w-4 h-4 text-sky-600 shrink-0 group-hover:scale-110 transition-transform" />
                 talentcircuittech.com
               </Link>
-              <a 
-                href="tel:+919840382636" 
+              <a
+                href="tel:+919840382636"
                 className="flex items-center gap-3 hover:text-sky-500 transition-colors group pt-2 border-t border-white/5"
               >
                 <div className="w-4 h-4 text-sky-600 shrink-0 group-hover:scale-110 transition-transform">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
                 </div>
                 +91 98403 82636
               </a>

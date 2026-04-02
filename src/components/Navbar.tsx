@@ -9,8 +9,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { 
-    label: "Services", 
+  {
+    label: "Services",
     href: "/services",
     submenu: [
       { label: "Permanent Staffing", href: "/services/permanent-staffing" },
@@ -44,16 +44,16 @@ export default function Navbar() {
       <div className="hidden sm:block bg-slate-950 text-slate-400 text-xs py-2.5 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-[11px] font-medium tracking-wide">
           <div className="flex items-center gap-6">
-            <a href="mailto:hr@talentcircuittech.com" className="hover:text-sky-500 transition-colors flex items-center gap-2">
-              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-              hr@talentcircuittech.com
+            <a href="mailto:HR@talentcircuittech.com" className="hover:text-sky-500 transition-colors flex items-center gap-2">
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+              HR@talentcircuittech.com
             </a>
             <a href="tel:+919840382636" className="hover:text-sky-500 transition-colors flex items-center gap-2">
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
               +91 98403 82636
             </a>
             <span className="hidden md:flex items-center gap-2">
-              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
               Pallikaranai, Chennai – 600100
             </span>
           </div>
@@ -69,22 +69,21 @@ export default function Navbar() {
 
       {/* Navbar */}
       <header
-        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
-          scrolled ? "shadow-lg border-b border-slate-100" : "border-b border-transparent"
-        }`}
+        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${scrolled ? "shadow-lg border-b border-slate-100" : "border-b border-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[80px]">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <div className="w-11 h-11 text-blue-900">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="3" fill="none"/>
-                <circle cx="20" cy="12" r="3" fill="currentColor"/>
-                <circle cx="27" cy="24" r="3" fill="currentColor"/>
-                <circle cx="13" cy="24" r="3" fill="currentColor"/>
-                <line x1="20" y1="15" x2="25" y2="22" stroke="currentColor" strokeWidth="2.5"/>
-                <line x1="20" y1="15" x2="15" y2="22" stroke="currentColor" strokeWidth="2.5"/>
-                <line x1="16" y1="24" x2="24" y2="24" stroke="currentColor" strokeWidth="2.5"/>
+                <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="3" fill="none" />
+                <circle cx="20" cy="12" r="3" fill="currentColor" />
+                <circle cx="27" cy="24" r="3" fill="currentColor" />
+                <circle cx="13" cy="24" r="3" fill="currentColor" />
+                <line x1="20" y1="15" x2="25" y2="22" stroke="currentColor" strokeWidth="2.5" />
+                <line x1="20" y1="15" x2="15" y2="22" stroke="currentColor" strokeWidth="2.5" />
+                <line x1="16" y1="24" x2="24" y2="24" stroke="currentColor" strokeWidth="2.5" />
               </svg>
             </div>
             <div className="flex flex-col">
@@ -100,7 +99,7 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
-              <div 
+              <div
                 key={item.label}
                 className="relative"
                 onMouseEnter={() => setHoveredItem(item.label)}

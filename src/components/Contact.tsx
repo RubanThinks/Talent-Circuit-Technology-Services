@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Globe, Phone, Send, Check, Loader2 } from "lucide-react";
+import { submitContactAction } from "@/app/actions/submit-contact";
 
 const contactItems = [
   {
@@ -14,21 +15,29 @@ const contactItems = [
     lines: ["49C, 1st Main Road, Jeyachandran Nagar,", "Jalladianpet, Pallikaranai, Chennai – 600100"],
     href: "https://www.google.com/maps/search/?api=1&query=49C,+1st+Main+Road,+Jeyachandran+Nagar,+Jalladianpet,+Pallikaranai,+Chennai+–+600100",
   },
-  { icon: Mail, title: "Email Us", lines: ["hr@talentcircuittech.com"], href: "mailto:hr@talentcircuittech.com" },
+  { icon: Mail, title: "Email Us", lines: ["rubans0908@gmail.com"], href: "mailto:rubans0908@gmail.com" },
   { icon: Phone, title: "Call Us", lines: ["+91 98403 82636"], href: "tel:+919840382636" },
   { icon: Globe, title: "Website", lines: ["www.talentcircuittech.com"], href: "https://www.talentcircuittech.com" },
 ];
 
 export default function Contact() {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
-    setTimeout(() => {
+
+    const formData = new FormData(e.currentTarget);
+    const result = await submitContactAction(formData);
+
+    if (result.success) {
       setStatus("sent");
-      setTimeout(() => setStatus("idle"), 2500);
-    }, 1500);
+      setTimeout(() => setStatus("idle"), 3000);
+      e.currentTarget.reset();
+    } else {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
+    }
   };
 
   return (
@@ -45,11 +54,11 @@ export default function Contact() {
             Inquiries
           </span>
           <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter italic mb-8 leading-none">
-            Let&apos;s Architect <br /> 
+            Let&apos;s Architect <br />
             <span className="text-sky-600">Your Future</span>
           </h2>
           <p className="text-slate-500 text-lg mb-12 leading-relaxed font-medium max-w-md">
-            Connect with our recruitment experts in Chennai. We respond to all 
+            Connect with our recruitment experts in Chennai. We respond to all
             critical inquiries within one business cycle.
           </p>
 
@@ -101,13 +110,13 @@ export default function Contact() {
                 <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
                   Full Name
                 </label>
-                <Input placeholder="Full Name" required className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
+                <Input name="name" placeholder="Full Name" required className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
               </div>
               <div>
                 <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
                   Email Address
                 </label>
-                <Input type="email" placeholder="Email" required className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
+                <Input name="email" type="email" placeholder="Email" required className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
               </div>
             </div>
             <div className="grid sm:grid-cols-2 gap-6">
@@ -115,13 +124,14 @@ export default function Contact() {
                 <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
                   Phone Number
                 </label>
-                <Input type="tel" placeholder="Phone" className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
+                <Input name="phone" type="tel" placeholder="Phone" className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
               </div>
               <div>
                 <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
                   Inquiry Type
                 </label>
                 <select
+                  name="type"
                   required
                   className="flex h-12 w-full rounded-none border border-slate-200 bg-white px-4 py-2 text-sm text-slate-800 transition-all focus:border-sky-600 focus:outline-none"
                 >
@@ -136,9 +146,9 @@ export default function Contact() {
               <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
                 Detailed Message
               </label>
-              <Textarea placeholder="Core requirements..." required className="rounded-none min-h-[120px] border-slate-200 focus:border-sky-600 bg-white" />
+              <Textarea name="message" placeholder="Core requirements..." required className="rounded-none min-h-[120px] border-slate-200 focus:border-sky-600 bg-white" />
             </div>
-            <Button type="submit" size="lg" className="w-full h-14 bg-slate-950 text-white hover:bg-sky-600 font-bold uppercase tracking-[0.2em] rounded-none transition-all" disabled={status !== "idle"}>
+            <Button type="submit" size="lg" className="w-full h-14 bg-slate-950 text-white hover:bg-sky-600 font-bold uppercase tracking-[0.2em] rounded-none transition-all" disabled={status === "sending"}>
               {status === "idle" && (
                 <>
                   <span>Transmit Message</span> <Send className="w-4 h-4" />
@@ -152,6 +162,11 @@ export default function Contact() {
               {status === "sent" && (
                 <>
                   <Check className="w-4 h-4" /> Delivered Successfully
+                </>
+              )}
+              {status === "error" && (
+                <>
+                  <span>Retry Transmission</span> <Send className="w-4 h-4" />
                 </>
               )}
             </Button>

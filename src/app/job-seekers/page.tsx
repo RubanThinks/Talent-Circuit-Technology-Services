@@ -26,7 +26,7 @@ export default function JobSeekersPage() {
                 Connect with the world's most innovative companies. We don't just find you a job, we guide your career trajectory.
               </p>
               <Button asChild size="lg" className="rounded-none bg-sky-600 hover:bg-white hover:text-slate-950 transition-all font-bold uppercase tracking-widest px-10 h-14 border-none text-white">
-                <Link href="/contact">Submit Your CV</Link>
+                <Link href="/job-seekers/submit">Submit Your CV</Link>
               </Button>
             </div>
             <div className="hidden md:block">

@@ -42,7 +42,7 @@ export default function Testimonials() {
           <span className="inline-block font-heading text-xs font-bold uppercase tracking-[0.3em] text-sky-600 mb-4">
             Market Validation
           </span>
-          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter italic">
+          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter">
             Strategic <span className="text-sky-600">Alliances</span>
           </h2>
         </motion.div>
@@ -62,7 +62,7 @@ export default function Testimonials() {
                   <Star key={j} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-sm text-slate-600 leading-relaxed mb-10 font-medium italic">
+              <p className="text-sm text-slate-600 leading-relaxed mb-10 font-medium whitespace-pre-line">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="flex items-center gap-4">

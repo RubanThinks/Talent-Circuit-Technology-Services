@@ -37,8 +37,8 @@ export default function Industries() {
           <span className="inline-block font-heading text-xs font-bold uppercase tracking-[0.3em] text-sky-600 mb-4">
             Global Sectors
           </span>
-          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter italic">
-            Industries <span className="text-sky-600">We Empower</span>
+          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter">
+            Vertical <span className="text-sky-600">Expertise</span>
           </h2>
         </motion.div>
 

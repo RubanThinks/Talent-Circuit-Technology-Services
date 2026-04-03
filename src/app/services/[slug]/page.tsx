@@ -48,7 +48,7 @@ export default async function ServicePage({ params }: Props) {
             <div className="w-16 h-16 bg-sky-600 flex items-center justify-center text-white mb-8">
               <Icon className="w-8 h-8" />
             </div>
-            <h1 className="font-heading text-5xl sm:text-7xl font-black text-white uppercase tracking-tighter italic mb-8 leading-[0.9]">
+            <h1 className="font-heading text-5xl sm:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-[0.9]">
               {service.title.split(' ').slice(0, -1).join(' ')} <br />
               <span className="text-sky-500">{service.title.split(' ').slice(-1)}</span>
             </h1>
@@ -68,7 +68,7 @@ export default async function ServicePage({ params }: Props) {
               <h2 className="font-heading text-xs font-bold text-sky-600 uppercase tracking-[0.4em] mb-6">
                 Service Overview
               </h2>
-              <p className="text-slate-600 text-lg sm:text-xl font-medium leading-loose mb-10 italic">
+              <p className="text-slate-600 text-lg sm:text-xl font-medium leading-loose mb-10">
                 &ldquo;{service.overview}&rdquo;
               </p>
               
@@ -104,7 +104,7 @@ export default async function ServicePage({ params }: Props) {
             
             {/* CTA */}
             <div className="bg-slate-50 p-10 sm:p-16 border-l-[10px] border-sky-600 mt-20">
-              <h3 className="font-heading text-2xl font-black text-slate-950 uppercase tracking-tight mb-6 italic">
+              <h3 className="font-heading text-2xl font-black text-slate-950 uppercase tracking-tight mb-6">
                 Ready to optimize your <span className="text-sky-600">{service.title}</span>?
               </h3>
               <p className="text-slate-600 mb-10 font-bold uppercase tracking-widest text-xs leading-relaxed max-w-lg">
@@ -153,7 +153,7 @@ export default async function ServicePage({ params }: Props) {
                   </svg>
                </div>
 
-              <h4 className="font-heading text-xl font-black uppercase tracking-tight mb-6 italic relative z-10">
+              <h4 className="font-heading text-xl font-black uppercase tracking-tight mb-6 relative z-10">
                 Precision <br /> <span className="text-sky-500">Recruitment</span>
               </h4>
               <p className="text-xs text-slate-400 font-bold uppercase tracking-widest leading-loose mb-10 relative z-10">
@@ -161,8 +161,8 @@ export default async function ServicePage({ params }: Props) {
               </p>
               <div className="space-y-6 relative z-10">
                 <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Contact Office</p>
-                <Link href="tel:+919840382636" className="block text-sm font-black hover:text-sky-400 transition-colors tracking-widest">
-                  +91 98403 82636
+                <Link href="tel:+919629616173" className="block text-sm font-black hover:text-sky-400 transition-colors tracking-widest">
+                  +91 96296 16173
                 </Link>
               </div>
             </div>

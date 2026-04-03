@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Send, Upload, CheckCircle2, ChevronRight, Loader2, FileText, Smartphone, Mail, User } from "lucide-react";
+import { Send, Upload, CheckCircle2, ChevronRight, Loader2, FileText, Smartphone, Mail, User, MapPin, Briefcase } from "lucide-react";
 import { submitCVAction } from "@/app/actions/submit-cv";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
@@ -42,7 +42,7 @@ export default function SubmitCVForm() {
                 <div className="w-20 h-20 bg-sky-600 flex items-center justify-center text-white mx-auto mb-8">
                     <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h2 className="font-heading text-4xl font-black text-slate-950 uppercase tracking-tighter mb-4 italic">
+                <h2 className="font-heading text-4xl font-black text-slate-950 uppercase tracking-tighter mb-4">
                     Application <span className="text-sky-600">Transmitted</span>
                 </h2>
                 <p className="text-slate-400 font-bold uppercase tracking-widest text-[11px] mb-10 max-w-sm mx-auto leading-relaxed">
@@ -66,7 +66,7 @@ export default function SubmitCVForm() {
                             <div className="w-12 h-12 bg-sky-600 flex items-center justify-center mb-10">
                                 <FileText className="w-6 h-6" />
                             </div>
-                            <h3 className="font-heading text-3xl font-black uppercase tracking-tight italic mb-6">
+                            <h3 className="font-heading text-3xl font-black uppercase tracking-tight mb-6">
                                 CV Submission <br /> & <span className="text-sky-600">Profile Registry</span>
                             </h3>
                             <p className="text-slate-500 text-xs font-bold uppercase tracking-widest leading-loose mb-10 max-w-[240px]">
@@ -103,13 +103,13 @@ export default function SubmitCVForm() {
                         <div className="grid sm:grid-cols-2 gap-8">
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <User className="w-3 h-3 text-sky-600" /> Full Legal Name
+                                    <User className="w-3 h-3 text-sky-600" /> Full Legal Name *
                                 </label>
                                 <Input name="name" required placeholder="Full Name" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
                             </div>
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <Mail className="w-3 h-3 text-sky-600" /> Professional Email
+                                    <Mail className="w-3 h-3 text-sky-600" /> Professional Email *
                                 </label>
                                 <Input name="email" type="email" required placeholder="email@address.com" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
                             </div>
@@ -118,15 +118,30 @@ export default function SubmitCVForm() {
                         <div className="grid sm:grid-cols-2 gap-8">
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
-                                    <Smartphone className="w-3 h-3 text-sky-600" /> Contact Number
+                                    <Smartphone className="w-3 h-3 text-sky-600" /> Contact Number *
                                 </label>
                                 <Input name="phone" type="tel" required placeholder="+91 00000 00000" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
                             </div>
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
-                                    Target Specialization
+                                    Current Role
                                 </label>
-                                <Input name="role" required placeholder="Applied Role" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                                <Input name="role" placeholder="Current Job Title" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                            </div>
+                        </div>
+
+                        <div className="grid sm:grid-cols-2 gap-8">
+                            <div className="space-y-3">
+                                <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
+                                    <MapPin className="w-3 h-3 text-sky-600" /> Location Preference
+                                </label>
+                                <Input name="location" placeholder="City or Remote" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                            </div>
+                            <div className="space-y-3">
+                                <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
+                                    <Briefcase className="w-3 h-3 text-sky-600" /> Experiences
+                                </label>
+                                <Input name="experience" placeholder="e.g., 5 Years" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
                             </div>
                         </div>
 
@@ -137,7 +152,7 @@ export default function SubmitCVForm() {
 
                         <div className="space-y-3">
                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] block mb-4">
-                                CV Extraction Node (.pdf, .docx)
+                                CV Attached (.pdf, .docx) *
                             </label>
                             <div className="relative">
                                 <input

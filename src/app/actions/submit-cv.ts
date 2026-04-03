@@ -7,6 +7,8 @@ export async function submitCVAction(formData: FormData) {
     const email = formData.get("email") as string;
     const phone = formData.get("phone") as string;
     const role = formData.get("role") as string;
+    const location = formData.get("location") as string;
+    const experience = formData.get("experience") as string;
     const message = formData.get("message") as string;
     const cvFile = formData.get("cv") as File;
 
@@ -35,9 +37,11 @@ export async function submitCVAction(formData: FormData) {
       Full Name: ${name}
       Email: ${email}
       Phone: ${phone}
-      Target Role: ${role}
-      Additional Message: 
-      \n${message}
+      Current Role: ${role || "Not provided"}
+      Location Preference: ${location || "Not provided"}
+      Experiences: ${experience || "Not provided"}
+      Profile Narrative: 
+      \n${message || "No narrative provided."}
     `,
         attachments: [
             {

@@ -22,7 +22,7 @@ export default function DualCTA() {
             <div className="w-14 h-14 bg-sky-600 flex items-center justify-center mb-8 text-white">
               <GraduationCap className="w-7 h-7" />
             </div>
-            <h2 className="font-heading text-3xl font-black uppercase mb-6 tracking-tighter italic">
+            <h2 className="font-heading text-3xl font-black uppercase mb-6 tracking-tighter">
               FOR <span className="text-sky-600">JOB SEEKERS</span>
             </h2>
             <p className="text-slate-500 text-sm mb-8 max-w-sm font-medium leading-relaxed">
@@ -62,7 +62,7 @@ export default function DualCTA() {
             <div className="w-14 h-14 bg-sky-600 flex items-center justify-center mb-8 text-white">
               <Building2 className="w-7 h-7" />
             </div>
-            <h2 className="font-heading text-3xl font-black uppercase mb-6 tracking-tighter italic">
+            <h2 className="font-heading text-3xl font-black uppercase mb-6 tracking-tighter">
               FOR <span className="text-sky-600">EMPLOYERS</span>
             </h2>
             <p className="text-slate-400 text-sm mb-8 max-w-sm font-medium leading-relaxed">

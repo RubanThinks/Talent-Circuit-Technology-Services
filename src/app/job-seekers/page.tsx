@@ -30,8 +30,9 @@ export default function JobSeekersPage() {
               </Button>
             </div>
             <div className="hidden md:block">
-              <div className="w-full h-[400px] border-[20px] border-white/5 flex items-center justify-center">
-                <GraduationCap className="w-32 h-32 text-sky-500 opacity-20" />
+              <div className="w-full h-[400px] border-[20px] border-white/5 flex items-center justify-center bg-[url('/images/jobseeker-bg.png')] bg-cover bg-center shadow-2xl relative overflow-hidden">
+                <div className="absolute inset-0 bg-slate-900/30"></div>
+                <GraduationCap className="w-20 h-20 text-white/50 relative z-10" />
               </div>
             </div>
           </div>
@@ -39,7 +40,7 @@ export default function JobSeekersPage() {
 
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="font-heading text-3xl font-black text-slate-950 mb-16 uppercase text-center tracking-tighter italic">Why Choose Talent Circuit?</h2>
+            <h2 className="font-heading text-3xl font-black text-slate-950 mb-16 uppercase text-center tracking-tighter">Why Choose Talent Circuit?</h2>
             <div className="grid sm:grid-cols-3 gap-8">
               {seekerSteps.map((step) => (
                 <Card key={step.title} className="rounded-none border-slate-100 shadow-none hover:shadow-2xl transition-all p-10">

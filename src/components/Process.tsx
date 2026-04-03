@@ -23,8 +23,8 @@ export default function Process() {
           <span className="inline-block font-heading text-xs font-bold uppercase tracking-[0.3em] text-sky-600 mb-4">
             Deployment Lifecycle
           </span>
-          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter italic">
-            Search <span className="text-sky-600">Methodology</span>
+          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter">
+            Operational <span className="text-sky-600">Workflow</span>
           </h2>
         </motion.div>
 

@@ -14,11 +14,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Stats />
         <About />
         <section className="bg-slate-950 py-24 text-white text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="font-heading text-3xl sm:text-4xl font-black uppercase mb-6 tracking-tighter italic">Global Executive Sourcing</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl font-black uppercase mb-6 tracking-tighter">Global Executive Sourcing</h2>
             <p className="text-slate-400 font-medium mb-10 leading-relaxed uppercase tracking-widest text-xs">
               Direct access to the world's most guarded talent pipelines.
             </p>

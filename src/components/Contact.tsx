@@ -16,7 +16,7 @@ const contactItems = [
     href: "https://www.google.com/maps/search/?api=1&query=49C,+1st+Main+Road,+Jeyachandran+Nagar,+Jalladianpet,+Pallikaranai,+Chennai+–+600100",
   },
   { icon: Mail, title: "Email Us", lines: ["HR@talentcircuittech.com"], href: "mailto:HR@talentcircuittech.com" },
-  { icon: Phone, title: "Call Us", lines: ["+91 98403 82636"], href: "tel:+919840382636" },
+  { icon: Phone, title: "Call Us", lines: ["+91 96296 16173"], href: "tel:+919629616173" },
   { icon: Globe, title: "Website", lines: ["www.talentcircuittech.com"], href: "https://www.talentcircuittech.com" },
 ];
 
@@ -53,7 +53,7 @@ export default function Contact() {
           <span className="inline-block font-heading text-xs font-bold uppercase tracking-[0.3em] text-sky-600 mb-6">
             Inquiries
           </span>
-          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter italic mb-8 leading-none">
+          <h2 className="font-heading text-4xl sm:text-5xl font-black text-slate-950 uppercase tracking-tighter mb-8 leading-none">
             Let&apos;s Architect <br />
             <span className="text-sky-600">Your Future</span>
           </h2>
@@ -108,13 +108,13 @@ export default function Contact() {
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
-                  Full Name
+                  Full Name *
                 </label>
                 <Input name="name" placeholder="Full Name" required className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
               </div>
               <div>
                 <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
-                  Email Address
+                  Email Address *
                 </label>
                 <Input name="email" type="email" placeholder="Email" required className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
               </div>
@@ -122,9 +122,9 @@ export default function Contact() {
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">
-                  Phone Number
+                  Phone Number *
                 </label>
-                <Input name="phone" type="tel" placeholder="Phone" className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
+                <Input name="phone" type="tel" placeholder="Phone" required className="rounded-none h-12 border-slate-200 focus:border-sky-600 bg-white" />
               </div>
               <div>
                 <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">

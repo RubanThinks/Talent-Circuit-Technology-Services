@@ -1,23 +1,28 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Crown, Zap, ShieldCheck } from "lucide-react";
+import { Zap, CheckCircle2, Target, Headphones } from "lucide-react";
 
 const features = [
   {
-    icon: Crown,
-    title: "Strategic Recruitment",
-    desc: "Customized hiring solutions aligned with your business goals and culture.",
-  },
-  {
     icon: Zap,
-    title: "Rapid Turnaround",
-    desc: "Industry-leading speed in sourcing, screening, and placing candidates.",
+    title: "Faster hiring turnaround",
+    desc: "Accelerated recruitment cycles with precision-matched candidates.",
   },
   {
-    icon: ShieldCheck,
-    title: "Quality Assurance",
-    desc: "Multi-stage vetting ensures only the best-fit candidates reach you.",
+    icon: CheckCircle2,
+    title: "Strong candidate validation",
+    desc: "Rigorous technical and cultural vetting for superior talent quality.",
+  },
+  {
+    icon: Target,
+    title: "High offer-to-join ratio",
+    desc: "Strategic candidate engagement ensuring maximum acceptance success.",
+  },
+  {
+    icon: Headphones,
+    title: "Dedicated client support",
+    desc: "Personalized account management and 24/7 recruitment consulting.",
   },
 ];
 
@@ -34,12 +39,11 @@ export default function About() {
           className="relative"
         >
           <div className="relative w-full h-[520px] bg-slate-900 overflow-hidden">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700 opacity-40" />
+            <div className="absolute inset-0 bg-[url('/images/about-bg-v2.png')] bg-cover bg-center transition-all duration-700 opacity-80" />
             <div className="absolute inset-0 border-[20px] border-white/10" />
             
-            <div className="absolute bottom-0 left-0 bg-sky-600 p-10 text-white translate-x-10 translate-y-[-40px]">
-              <div className="font-heading text-5xl font-black mb-1">15+</div>
-              <div className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-80">Years of Experience</div>
+            <div className="absolute bottom-0 left-0 bg-sky-600 p-8 text-white translate-x-10 translate-y-[-40px] max-w-[200px]">
+              <div className="font-heading text-lg font-black leading-tight">Built on Proven Recruitment Expertise</div>
             </div>
           </div>
         </motion.div>
@@ -54,7 +58,7 @@ export default function About() {
           <span className="inline-block font-heading text-xs font-bold uppercase tracking-[0.3em] text-sky-600 mb-6">
             The TCTS Legacy
           </span>
-          <h2 className="font-heading text-3xl sm:text-5xl font-black text-slate-950 mb-8 uppercase tracking-tighter italic">
+          <h2 className="font-heading text-3xl sm:text-5xl font-black text-slate-950 mb-8 uppercase tracking-tighter">
             Connecting World-Class <br /> 
             <span className="text-sky-600">Talent & Capital</span>
           </h2>

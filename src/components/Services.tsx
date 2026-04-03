@@ -91,7 +91,7 @@ export default function Services() {
               <div className="relative h-full bg-white hover:bg-slate-950 transition-all duration-300 group flex flex-col">
                 <div className="relative h-56 w-full overflow-hidden">
                   <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-all z-10" />
-                  <img src={svc.image} alt={svc.title} className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                  <img src={svc.image} alt={svc.title} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700" />
                   {/* Highlight Badge - Appears on Hover */}
                   <span className="absolute top-4 right-4 text-[8px] font-bold uppercase tracking-[0.2em] bg-sky-600 text-white px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity z-20">
                     Active Listing

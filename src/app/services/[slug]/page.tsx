@@ -31,8 +31,12 @@ export default async function ServicePage({ params }: Props) {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-slate-950 overflow-hidden">
-        {/* Background Accents */}
+      <section 
+        className="relative pt-32 pb-20 bg-slate-950 overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: `url('${service.image}')` }}
+      >
+        {/* Background Accents / Overlay for Absolute Text Readability */}
+        <div className="absolute inset-0 bg-slate-950/90" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-sky-600/5 skew-x-12 transform origin-top" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -122,7 +126,7 @@ export default async function ServicePage({ params }: Props) {
 
           {/* Sidebar */}
           <aside className="lg:col-span-4 space-y-12">
-            <div className="bg-white border border-slate-100 p-10">
+            <div className="bg-white border border-slate-100 p-6 sm:p-10">
               <h4 className="font-heading text-xs font-bold text-slate-950 uppercase tracking-[0.4em] mb-10">
                 Other Expertises
               </h4>
@@ -142,7 +146,7 @@ export default async function ServicePage({ params }: Props) {
               </div>
             </div>
 
-            <div className="bg-slate-950 p-10 text-white relative overflow-hidden">
+            <div className="bg-slate-950 p-6 sm:p-10 text-white relative overflow-hidden">
                {/* Background Pattern */}
                <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
                   <svg width="100%" height="100%" className="fill-current text-white/20">

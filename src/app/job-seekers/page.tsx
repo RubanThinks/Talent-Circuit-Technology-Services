@@ -16,10 +16,11 @@ export default function JobSeekersPage() {
     <>
       <Navbar />
       <main className="pt-20">
-        <div className="bg-slate-950 py-32 text-white">
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative bg-slate-950 py-32 text-white overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/jobseekers-hero-bg.png')" }}>
+          <div className="absolute inset-0 bg-slate-950/90" />
+          <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="font-heading text-5xl sm:text-6xl font-black uppercase mb-8 tracking-tighter leading-none">
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-black uppercase mb-8 tracking-tighter leading-none">
                 ELEVATE <br /> YOUR CAREER
               </h1>
               <p className="text-slate-400 text-lg mb-10 max-w-lg font-medium leading-relaxed">

@@ -31,7 +31,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading text-5xl sm:text-6xl lg:text-[72px] font-black leading-[0.95] mb-8 tracking-tighter"
+            className="font-heading text-[12vw] sm:text-6xl lg:text-[72px] font-black leading-[0.95] mb-8 tracking-tighter"
           >
             PRECISION <br />
             <span className="text-sky-500">TALENT</span> <br />

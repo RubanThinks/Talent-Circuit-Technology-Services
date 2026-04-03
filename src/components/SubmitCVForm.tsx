@@ -38,7 +38,7 @@ export default function SubmitCVForm() {
 
     if (status === "success") {
         return (
-            <div className="text-center py-24 bg-white border border-slate-100 p-10 animate-fade-in">
+            <div className="text-center py-24 bg-white border border-slate-100 p-6 sm:p-10 animate-fade-in">
                 <div className="w-20 h-20 bg-sky-600 flex items-center justify-center text-white mx-auto mb-8">
                     <CheckCircle2 className="w-10 h-10" />
                 </div>
@@ -61,7 +61,7 @@ export default function SubmitCVForm() {
             <CardContent className="p-0">
                 <form onSubmit={handleFormSubmit} className="grid lg:grid-cols-5 h-full">
                     {/* Form Header / Guidance */}
-                    <div className="lg:col-span-2 bg-slate-950 p-10 md:p-14 text-white flex flex-col justify-between">
+                    <div className="lg:col-span-2 bg-slate-950 p-6 md:p-10 lg:p-14 text-white flex flex-col justify-between">
                         <div>
                             <div className="w-12 h-12 bg-sky-600 flex items-center justify-center mb-10">
                                 <FileText className="w-6 h-6" />
@@ -99,7 +99,7 @@ export default function SubmitCVForm() {
                     </div>
 
                     {/* Actual Inputs */}
-                    <div className="lg:col-span-3 p-10 md:p-14 bg-white space-y-8">
+                    <div className="lg:col-span-3 p-6 md:p-10 lg:p-14 bg-white space-y-8">
                         <div className="grid sm:grid-cols-2 gap-8">
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">

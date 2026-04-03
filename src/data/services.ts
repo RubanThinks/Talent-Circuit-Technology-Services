@@ -13,6 +13,7 @@ export const servicesData = {
     icon: UsersRound,
     description: "Building your core team with long-term professionals who align with your company culture and vision.",
     overview: "Our permanent staffing solutions are designed to find the missing piece of your organizational puzzle. We don't just fill seats; we build legacies by identifying talent that fits your DNA.",
+    image: "/images/permanent-staffing.png",
     features: [
       "Rigorous cultural alignment assessment",
       "Multi-stage technical screening",
@@ -31,6 +32,7 @@ export const servicesData = {
     icon: RotateCcw,
     description: "Flexible workforce solutions for project-based roles and specialized short-term requirements.",
     overview: "In an agile business world, flexibility is currency. Our contract staffing provides you with high-caliber talent exactly when you need it, without the long-term overhead.",
+    image: "/images/contract-staffing.png",
     features: [
       "Rapid deployment of experts",
       "Payroll and compliance management",
@@ -49,6 +51,7 @@ export const servicesData = {
     icon: UserCog,
     description: "Confidential, strategic recruitment for C-suite and senior leadership positions.",
     overview: "Leadership defines destiny. Our executive search is a surgical approach to finding leaders who can navigate complexity and drive transformation in your enterprise.",
+    image: "/images/executive-search.png",
     features: [
       "Targeted headhunting strategy",
       "Confidential market mapping",
@@ -67,6 +70,7 @@ export const servicesData = {
     icon: SearchCheck,
     description: "Full-cycle Recruitment Process Outsourcing — we manage your entire hiring pipeline.",
     overview: "Transform your recruitment into a strategic engine. We take ownership of your entire hiring lifecycle, from sourcing to onboarding, delivering efficiency at scale.",
+    image: "/images/rpo-services.png",
     features: [
       "End-to-end process management",
       "Proprietary sourcing technologies",
@@ -85,6 +89,7 @@ export const servicesData = {
     icon: LaptopMinimal,
     description: "Specialized technology recruitment for developers, architects, and IT professionals.",
     overview: "Technology moves fast; we move faster. Our specialized IT recruitment pods understand the nuances of the tech stack, ensuring you get builders, not just coders.",
+    image: "/images/it-staffing.png",
     features: [
       "Full-stack technical vetting",
       "Cloud & infrastructure specialists",
@@ -103,6 +108,7 @@ export const servicesData = {
     icon: ArrowLeftRight,
     description: "Strategic HR advisory including workforce planning and talent management.",
     overview: "Beyond recruitment, we architect people strategy. Our consulting services help you design the systems that make your human capital a competitive advantage.",
+    image: "/images/hr-consulting.png",
     features: [
       "Compensation benchmarking",
       "Organizational design mapping",

@@ -10,8 +10,9 @@ export default function SubmitCVPage() {
             <Navbar />
             <main className="pt-20 bg-slate-50 min-h-screen">
                 {/* Breadcrumb / Intro */}
-                <div className="bg-slate-950 py-20 text-white">
-                    <div className="max-w-7xl mx-auto px-6">
+                <div className="relative bg-slate-950 py-24 pb-32 text-white bg-cover bg-center" style={{ backgroundImage: "url('/images/submit-cv-hero-bg.png')" }}>
+                    <div className="absolute inset-0 bg-slate-950/90" />
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
                         <nav className="flex items-center gap-2 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500 mb-10">
                             <Link href="/" className="hover:text-white transition-colors">Portal</Link>
                             <ChevronRight className="w-3 h-3" />

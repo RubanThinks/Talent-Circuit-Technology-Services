@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -73,16 +74,15 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[80px]">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-11 h-11 text-blue-900">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="3" fill="none" />
-                <circle cx="20" cy="12" r="3" fill="currentColor" />
-                <circle cx="27" cy="24" r="3" fill="currentColor" />
-                <circle cx="13" cy="24" r="3" fill="currentColor" />
-                <line x1="20" y1="15" x2="25" y2="22" stroke="currentColor" strokeWidth="2.5" />
-                <line x1="20" y1="15" x2="15" y2="22" stroke="currentColor" strokeWidth="2.5" />
-                <line x1="16" y1="24" x2="24" y2="24" stroke="currentColor" strokeWidth="2.5" />
-              </svg>
+            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-sky-100 shadow-md flex-shrink-0">
+              <Image
+                src="/images/tcts-logo.jpeg"
+                alt="Talent Circuit Technology Services Logo"
+                width={56}
+                height={56}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-black text-xl text-slate-950 tracking-tight leading-none">

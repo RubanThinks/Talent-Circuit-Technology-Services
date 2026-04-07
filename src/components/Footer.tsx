@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Mail, Globe, Linkedin, Facebook, Instagram, MessageCircle } from "lucide-react";
 
 const quickLinks = [
@@ -23,13 +24,14 @@ export default function Footer() {
           {/* About */}
           <div>
             <Link href="/" className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 text-sky-600">
-                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="3" fill="none" />
-                  <circle cx="20" cy="12" r="3" fill="currentColor" />
-                  <circle cx="27" cy="24" r="3" fill="currentColor" />
-                  <circle cx="13" cy="24" r="3" fill="currentColor" />
-                </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-sky-600/30 shadow-lg flex-shrink-0">
+                <Image
+                  src="/images/tcts-logo.jpeg"
+                  alt="Talent Circuit Technology Services Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-heading font-black text-lg text-white tracking-tight leading-none uppercase">

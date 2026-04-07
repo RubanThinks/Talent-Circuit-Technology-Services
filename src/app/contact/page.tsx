@@ -6,14 +6,11 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
-        <div className="relative bg-slate-950 py-32 text-white text-center bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/images/contact-hero-bg.png')" }}>
-          <div className="absolute inset-0 bg-slate-950/90" />
-          <div className="relative z-10 max-w-4xl mx-auto px-6">
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tighter mb-6">CONTACT <span className="text-sky-500">US</span></h1>
-            <p className="text-slate-400 text-lg font-medium">
-              Connect with our recruitment experts in Chennai.
-            </p>
+      <main>
+        <div className="bg-slate-50 border-b border-slate-100 py-12">
+          <div className="max-w-7xl mx-auto px-6">
+            <h1 className="font-jakarta text-3xl sm:text-4xl font-bold text-slate-950 uppercase tracking-normal">CONTACT <span className="text-sky-600 ml-2">US</span></h1>
+            <p className="text-slate-500 mt-2 font-medium max-w-2xl text-sm uppercase tracking-wide">Connect with our recruitment experts in Chennai.</p>
           </div>
         </div>
         <Contact />

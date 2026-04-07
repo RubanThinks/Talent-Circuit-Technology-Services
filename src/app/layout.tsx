@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +11,12 @@ const inter = Inter({
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-heading",
+  display: "swap",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -37,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} overflow-x-hidden`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${outfit.variable} ${jakarta.variable} overflow-x-hidden`} suppressHydrationWarning>
       <body className="bg-white text-slate-700 antialiased overflow-x-hidden" suppressHydrationWarning>
         {children}
         <WhatsAppButton />

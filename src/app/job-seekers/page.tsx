@@ -15,27 +15,11 @@ export default function JobSeekersPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
-        <div className="relative bg-slate-950 py-32 text-white overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/images/jobseekers-hero-bg.png')" }}>
-          <div className="absolute inset-0 bg-slate-950/90" />
-          <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-black uppercase mb-8 tracking-tighter leading-none">
-                ELEVATE <br /> YOUR CAREER
-              </h1>
-              <p className="text-slate-400 text-lg mb-10 max-w-lg font-medium leading-relaxed">
-                Connect with the world's most innovative companies. We don't just find you a job, we guide your career trajectory.
-              </p>
-              <Button asChild size="lg" className="rounded-none bg-sky-600 hover:bg-white hover:text-slate-950 transition-all font-bold uppercase tracking-widest px-10 h-14 border-none text-white">
-                <Link href="/job-seekers/submit">Submit Your CV</Link>
-              </Button>
-            </div>
-            <div className="hidden md:block">
-              <div className="w-full h-[400px] border-[20px] border-white/5 flex items-center justify-center bg-[url('/images/jobseeker-bg.png')] bg-cover bg-center shadow-2xl relative overflow-hidden">
-                <div className="absolute inset-0 bg-slate-900/30"></div>
-                <GraduationCap className="w-20 h-20 text-white/50 relative z-10" />
-              </div>
-            </div>
+      <main>
+        <div className="bg-slate-50 border-b border-slate-100 py-12">
+          <div className="max-w-7xl mx-auto px-6">
+            <h1 className="font-jakarta text-3xl sm:text-4xl font-bold text-slate-950 uppercase tracking-normal">JOB <span className="text-sky-600 ml-2">SEEKERS</span></h1>
+            <p className="text-slate-500 mt-2 font-medium max-w-2xl text-sm uppercase tracking-wide">Elevate your career with elite opportunities.</p>
           </div>
         </div>
 

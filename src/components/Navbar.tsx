@@ -73,10 +73,10 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[80px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/contact" className="flex items-center gap-3">
             <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-sky-100 shadow-md flex-shrink-0">
               <Image
-                src="/images/tcts-logo.jpeg"
+                src="/images/tcts-icon.jpeg"
                 alt="Talent Circuit Technology Services Logo"
                 width={56}
                 height={56}
@@ -85,10 +85,10 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-black text-xl text-slate-950 tracking-tight leading-none">
+              <span className="font-jakarta font-bold text-[22px] tracking-tight leading-none" style={{ color: '#002E5D' }}>
                 Talent Circuit
               </span>
-              <span className="text-[10px] font-bold text-sky-600 tracking-[0.15em] uppercase mt-1">
+              <span className="font-jakarta text-[12px] font-medium tracking-[0.05em] mt-1" style={{ color: '#0099CA' }}>
                 Technology Services
               </span>
             </div>
@@ -105,7 +105,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="text-[13px] font-bold px-4 py-2 text-slate-600 hover:text-blue-900 transition-colors uppercase tracking-wider flex items-center gap-1"
+                  className="text-[13px] font-black px-4 py-2 text-slate-600 hover:text-blue-900 transition-colors uppercase tracking-wider flex items-center gap-1"
                 >
                   {item.label}
                   {item.submenu && <ChevronDown className={`w-3 h-3 transition-transform ${hoveredItem === item.label ? 'rotate-180' : ''}`} />}

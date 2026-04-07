@@ -7,14 +7,11 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
-        <div className="relative bg-slate-950 py-32 text-white text-center bg-cover bg-center overflow-hidden" style={{ backgroundImage: "url('/images/about-hero-bg.png')" }}>
-          <div className="absolute inset-0 bg-slate-950/90" />
-          <div className="relative z-10 max-w-4xl mx-auto px-6">
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tighter mb-6">ABOUT <span className="text-sky-500">US</span></h1>
-            <p className="text-slate-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-              Talent Circuit Technology Services (TCTS) is a recruitment and consulting firm focused on delivering the right talent through a structured and result-oriented approach. We partner with organizations to understand their hiring needs and provide tailored solutions that ensure long-term success.
-            </p>
+      <main>
+        <div className="bg-slate-50 border-b border-slate-100 py-12">
+          <div className="max-w-7xl mx-auto px-6">
+            <h1 className="font-jakarta text-3xl sm:text-4xl font-bold text-slate-950 uppercase tracking-normal">ABOUT <span className="text-sky-600 ml-2">US</span></h1>
+            <p className="text-slate-500 mt-2 font-medium max-w-2xl text-sm uppercase tracking-wide">Learn more about Talent Circuit Technology Services and our mission.</p>
           </div>
         </div>
         <About />

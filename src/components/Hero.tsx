@@ -33,7 +33,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-heading text-[12vw] sm:text-6xl lg:text-[72px] font-black leading-[0.95] mb-8 tracking-tighter"
+              className="font-heading text-[12vw] sm:text-6xl lg:text-[72px] font-black leading-[0.95] mb-8 tracking-tight"
             >
               PRECISION <br />
               <span className="text-sky-500">TALENT</span> <br />
@@ -88,16 +88,18 @@ export default function Hero() {
               <div className="absolute -inset-3 rounded-full border border-sky-500/20" />
               <div className="absolute -inset-6 rounded-full border border-sky-400/10" />
               {/* Logo container */}
-              <div className="w-72 h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl shadow-sky-500/20 relative z-10 bg-white">
-                <Image
-                  src="/images/tcts-logo.jpeg"
-                  alt="Talent Circuit Technology Services Logo"
-                  width={320}
-                  height={320}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-              </div>
+              <Link href="/contact" className="block relative z-10 transition-transform hover:scale-105 active:scale-95 duration-300">
+                <div className="w-72 h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl shadow-sky-500/20 bg-white">
+                  <Image
+                    src="/images/tcts-logo.jpeg"
+                    alt="Talent Circuit Technology Services Logo"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
+                </div>
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -23,10 +23,10 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-16 pb-16 border-b border-white/5">
           {/* About */}
           <div>
-            <Link href="/" className="flex items-center gap-3 mb-8">
+            <Link href="/contact" className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-sky-600/30 shadow-lg flex-shrink-0">
                 <Image
-                  src="/images/tcts-logo.jpeg"
+                  src="/images/tcts-icon.jpeg"
                   alt="Talent Circuit Technology Services Logo"
                   width={48}
                   height={48}
@@ -34,10 +34,10 @@ export default function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-heading font-black text-lg text-white tracking-tight leading-none uppercase">
+                <span className="font-jakarta font-bold text-xl tracking-tight leading-none" style={{ color: '#ffffff' }}>
                   Talent Circuit
                 </span>
-                <span className="text-[10px] font-bold text-sky-600 tracking-[0.15em] uppercase mt-1">
+                <span className="font-jakarta text-[11px] font-medium tracking-[0.05em] mt-1" style={{ color: '#0099CA' }}>
                   Technology Services
                 </span>
               </div>

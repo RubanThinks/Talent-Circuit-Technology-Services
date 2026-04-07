@@ -30,35 +30,28 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <main className="bg-white">
-      {/* Hero Section */}
-      <section 
-        className="relative pt-32 pb-20 bg-slate-950 overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url('${service.image}')` }}
-      >
-        {/* Background Accents / Overlay for Absolute Text Readability */}
-        <div className="absolute inset-0 bg-slate-950/90" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-sky-600/5 skew-x-12 transform origin-top" />
-        
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <nav className="flex items-center gap-2 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+      {/* Compact Banner */}
+      <section className="bg-slate-50 border-b border-slate-100 py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <nav className="flex items-center gap-2 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500 mb-6">
+            <Link href="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
-            <Link href="/services" className="hover:text-white transition-colors">Services</Link>
+            <Link href="/services" className="hover:text-sky-600 transition-colors">Services</Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-sky-500">{service.title}</span>
+            <span className="text-sky-600">{service.title}</span>
           </nav>
-          
-          <div className="max-w-3xl">
-            <div className="w-16 h-16 bg-sky-600 flex items-center justify-center text-white mb-8">
-              <Icon className="w-8 h-8" />
+          <div className="flex flex-col md:flex-row md:items-center gap-6">
+            <div className="w-12 h-12 bg-sky-600 flex items-center justify-center text-white shrink-0">
+              <Icon className="w-6 h-6" />
             </div>
-            <h1 className="font-heading text-5xl sm:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-[0.9]">
-              {service.title.split(' ').slice(0, -1).join(' ')} <br />
-              <span className="text-sky-500">{service.title.split(' ').slice(-1)}</span>
-            </h1>
-            <p className="text-slate-400 text-xl font-medium leading-relaxed max-w-2xl">
-              {service.description}
-            </p>
+            <div>
+              <h1 className="font-jakarta text-3xl sm:text-5xl font-bold text-slate-950 uppercase tracking-normal">
+                {service.title.split(' ').slice(0, -1).join(' ')} <span className="text-sky-600 ml-2">{service.title.split(' ').slice(-1)}</span>
+              </h1>
+              <p className="text-slate-500 mt-2 font-medium text-sm md:text-base max-w-3xl uppercase tracking-wide">
+                {service.description}
+              </p>
+            </div>
           </div>
         </div>
       </section>

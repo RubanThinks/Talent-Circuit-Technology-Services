@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-16 pb-16 border-b border-white/5">
           {/* About */}
           <div>
-            <Link href="/contact" className="flex items-center gap-3 mb-8">
+            <Link href="/" className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-sky-600/30 shadow-lg flex-shrink-0">
                 <Image
                   src="/images/tcts-icon.jpeg"

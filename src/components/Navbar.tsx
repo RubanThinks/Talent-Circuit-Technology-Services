@@ -73,7 +73,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-[80px]">
           {/* Logo */}
-          <Link href="/contact" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-sky-100 shadow-md flex-shrink-0">
               <Image
                 src="/images/tcts-icon.jpeg"

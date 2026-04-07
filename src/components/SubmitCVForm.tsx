@@ -105,13 +105,13 @@ export default function SubmitCVForm() {
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
                                     <User className="w-3 h-3 text-sky-600" /> Full Legal Name *
                                 </label>
-                                <Input name="name" required placeholder="Full Name" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                                <Input name="name" required placeholder="Full Name" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-sm font-medium" />
                             </div>
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
                                     <Mail className="w-3 h-3 text-sky-600" /> Professional Email *
                                 </label>
-                                <Input name="email" type="email" required placeholder="email@address.com" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                                <Input name="email" type="email" required placeholder="email@address.com" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-sm font-medium" />
                             </div>
                         </div>
 
@@ -120,13 +120,13 @@ export default function SubmitCVForm() {
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
                                     <Smartphone className="w-3 h-3 text-sky-600" /> Contact Number *
                                 </label>
-                                <Input name="phone" type="tel" required placeholder="+91 00000 00000" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                                <Input name="phone" type="tel" required placeholder="+91 00000 00000" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-sm font-medium" />
                             </div>
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
                                     Current Role
                                 </label>
-                                <Input name="role" placeholder="Current Job Title" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                                <Input name="role" placeholder="Current Job Title" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-sm font-medium" />
                             </div>
                         </div>
 
@@ -135,19 +135,19 @@ export default function SubmitCVForm() {
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
                                     <MapPin className="w-3 h-3 text-sky-600" /> Location Preference
                                 </label>
-                                <Input name="location" placeholder="City or Remote" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                                <Input name="location" placeholder="City or Remote" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-sm font-medium" />
                             </div>
                             <div className="space-y-3">
                                 <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
                                     <Briefcase className="w-3 h-3 text-sky-600" /> Experiences
                                 </label>
-                                <Input name="experience" placeholder="e.g., 5 Years" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest" />
+                                <Input name="experience" placeholder="e.g., 5 Years" className="rounded-none border-slate-200 h-14 bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-sm font-medium" />
                             </div>
                         </div>
 
                         <div className="space-y-3">
                             <label className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">Profile Narrative (Optional)</label>
-                            <Textarea name="message" placeholder="Briefly architect your career summary..." className="rounded-none border-slate-200 min-h-[140px] bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-xs font-bold uppercase tracking-widest leading-loose" />
+                            <Textarea name="message" placeholder="Briefly architect your career summary..." className="rounded-none border-slate-200 min-h-[140px] bg-slate-50 focus:border-sky-600 focus:bg-white transition-all text-sm font-medium leading-loose" />
                         </div>
 
                         <div className="space-y-3">

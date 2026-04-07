@@ -20,6 +20,11 @@ export default function JobSeekersPage() {
           <div className="max-w-7xl mx-auto px-6">
             <h1 className="font-jakarta text-3xl sm:text-4xl font-bold text-slate-950 uppercase tracking-normal">JOB <span className="text-sky-600 ml-2">SEEKERS</span></h1>
             <p className="text-slate-500 mt-2 font-medium max-w-2xl mx-auto text-sm uppercase tracking-wide">Elevate your career with elite opportunities.</p>
+            <div className="mt-8 flex justify-center">
+              <Button asChild size="lg" className="rounded-none bg-sky-600 hover:bg-slate-950 transition-all font-bold uppercase tracking-widest px-10 h-14 border-none text-white text-xs">
+                <Link href="/job-seekers/submit">Submit Your CV</Link>
+              </Button>
+            </div>
           </div>
         </div>
 

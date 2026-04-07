@@ -31,16 +31,16 @@ export default async function ServicePage({ params }: Props) {
   return (
     <main className="bg-white">
       {/* Compact Banner */}
-      <section className="bg-slate-50 border-b border-slate-100 py-12">
+      <section className="bg-slate-50 border-b border-slate-100 py-12 text-center">
         <div className="max-w-7xl mx-auto px-6">
-          <nav className="flex items-center gap-2 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500 mb-6">
+          <nav className="flex items-center justify-center gap-2 text-[10px] uppercase font-bold tracking-[0.2em] text-slate-500 mb-6">
             <Link href="/" className="hover:text-sky-600 transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3" />
             <Link href="/services" className="hover:text-sky-600 transition-colors">Services</Link>
             <ChevronRight className="w-3 h-3" />
             <span className="text-sky-600">{service.title}</span>
           </nav>
-          <div className="flex flex-col md:flex-row md:items-center gap-6">
+          <div className="flex flex-col items-center gap-6">
             <div className="w-12 h-12 bg-sky-600 flex items-center justify-center text-white shrink-0">
               <Icon className="w-6 h-6" />
             </div>
@@ -48,7 +48,7 @@ export default async function ServicePage({ params }: Props) {
               <h1 className="font-jakarta text-3xl sm:text-5xl font-bold text-slate-950 uppercase tracking-normal">
                 {service.title.split(' ').slice(0, -1).join(' ')} <span className="text-sky-600 ml-2">{service.title.split(' ').slice(-1)}</span>
               </h1>
-              <p className="text-slate-500 mt-2 font-medium text-sm md:text-base max-w-3xl uppercase tracking-wide">
+              <p className="text-slate-500 mt-2 font-medium text-sm md:text-base max-w-3xl mx-auto uppercase tracking-wide">
                 {service.description}
               </p>
             </div>
